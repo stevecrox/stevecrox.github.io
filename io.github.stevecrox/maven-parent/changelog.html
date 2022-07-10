@@ -51,6 +51,7 @@
                      <li class="nav-item dropdown-item"><a title="Change Log" class="dropdown-item">Change Log</a></li>
                      <li class="nav-item dropdown-item"><a href="file-activity.html" title="File Activity" class="dropdown-item" >File Activity</a></li>
                      <li class="nav-item dropdown-item"><a href="dev-activity.html" title="Developer Activity" class="dropdown-item" >Developer Activity</a></li>
+                     <li class="nav-item dropdown-item"><a href="surefire-report.html" title="Surefire Report" class="dropdown-item" >Surefire Report</a></li>
                    </ul>
                  </li>
                </ul>
@@ -63,9 +64,9 @@
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
-            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-09</span>
+            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-10</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.0.3</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 0.0.4</span>
           </div>
         </div>
       </nav>
@@ -75,25 +76,41 @@
 <section>
 <h2><a name="Change_Log_Report"></a>Change Log Report</h2>
 <p>Total number of changed sets: 1</p><section>
-<h3><a name="Changes_between_06-09-2022_and_07-10-2022"></a>Changes between 06-09-2022 and 07-10-2022</h3>
-<p>Total commits: 10<br />Total number of files changed: 9</p>
+<h3><a name="Changes_between_06-10-2022_and_07-11-2022"></a>Changes between 06-10-2022 and 07-11-2022</h3>
+<p>Total commits: 14<br />Total number of files changed: 9</p>
 <table border="0" class="table table-striped">
 <tr class="a">
 <th>Timestamp</th>
 <th>Author</th>
 <th>Details</th></tr>
 <tr class="b">
+<td>2022-07-10 22:03:35</td>
+<td>Stephen &lt;stevecrox@hotmail.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitcd4714a463d2e45ab22ce84f454741862cabe8ee">v cd4714a463d2e45ab22ce84f454741862cabe8ee</a><br /><br />Added Maven Surefire into the maven-parent</td></tr>
+<tr class="a">
+<td>2022-07-10 21:54:47</td>
+<td>Stephen &lt;stevecrox@hotmail.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/.github/workflows/release.yml">.github/workflows/<b>release.yml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commit0fa7f224ff06e7d4fdbcbf1e805723e94983e11b">v 0fa7f224ff06e7d4fdbcbf1e805723e94983e11b</a><br /><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commit0fa7f224ff06e7d4fdbcbf1e805723e94983e11b">v 0fa7f224ff06e7d4fdbcbf1e805723e94983e11b</a><br /><br />Tried to pull in the GPG Signing and Checksum generation, updated the release mechanisim so it should rely on this.</td></tr>
+<tr class="b">
+<td>2022-07-10 21:06:08</td>
+<td>GitHub Action &lt;github@stevecrox.github.io&gt;</td>
+<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitdb40b313ec3b46f65b9dd72b51aad7699622a594">v db40b313ec3b46f65b9dd72b51aad7699622a594</a><br /><br />[maven-release-plugin] prepare release v{project.version}</td></tr>
+<tr class="a">
 <td>2022-07-09 22:23:51</td>
 <td>Stephen &lt;stevecrox@hotmail.com&gt;</td>
 <td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commit09941a42dc1808ea164781a06aec0c91bd3b4eeb">v 09941a42dc1808ea164781a06aec0c91bd3b4eeb</a><br /><br />Reverted version</td></tr>
-<tr class="a">
+<tr class="b">
 <td>2022-07-09 22:07:53</td>
 <td>Stephen &lt;stevecrox@hotmail.com&gt;</td>
 <td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitd21a706e89bf91be6802a66851c5cc27289ef8d6">v d21a706e89bf91be6802a66851c5cc27289ef8d6</a><br /><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/src/site/site.xml">src/site/<b>site.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitd21a706e89bf91be6802a66851c5cc27289ef8d6">v d21a706e89bf91be6802a66851c5cc27289ef8d6</a><br /><br />Updated the POM to pull in stuff from the maven mirror tool, so I can share this between projects.</td></tr>
-<tr class="b">
+<tr class="a">
 <td>2022-07-09 21:59:33</td>
 <td>Stephen &lt;stevecrox@hotmail.com&gt;</td>
 <td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitbd065ffa7f7adf7eecb1154eb3a667b16cefbdc9">v bd065ffa7f7adf7eecb1154eb3a667b16cefbdc9</a><br /><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/src/site/resources/maven-theme.css">src/site/resources/<b>maven-theme.css</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitbd065ffa7f7adf7eecb1154eb3a667b16cefbdc9">v bd065ffa7f7adf7eecb1154eb3a667b16cefbdc9</a><br /><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/src/site/site.xml">src/site/<b>site.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commitbd065ffa7f7adf7eecb1154eb3a667b16cefbdc9">v bd065ffa7f7adf7eecb1154eb3a667b16cefbdc9</a><br /><br />Added reporting plugin</td></tr>
+<tr class="b">
+<td>2022-07-09 21:25:13</td>
+<td>GitHub Action &lt;github@stevecrox.github.io&gt;</td>
+<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/tree/master/pom.xml"><b>pom.xml</b></a> <a class="externalLink" href="https://github.com/stevecrox/maven-parent/commit6ed43af2617f8b9e4917223bc557bffc05201da3">v 6ed43af2617f8b9e4917223bc557bffc05201da3</a><br /><br />[maven-release-plugin] prepare for next development iteration</td></tr>
 <tr class="a">
 <td>2022-07-09 21:25:12</td>
 <td>GitHub Action &lt;github@stevecrox.github.io&gt;</td>

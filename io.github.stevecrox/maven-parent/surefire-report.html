@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Parent &#x2013; File Activity Report</title>
+    <title>Maven Parent &#x2013; Surefire Report</title>
     <link rel="icon" href="./img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -49,9 +49,9 @@
                    <a href="project-reports.html" title="Project Reports" class="dropdown-item" >Project Reports</a>
                    <ul id="Project DocumentationMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="changelog.html" title="Change Log" class="dropdown-item" >Change Log</a></li>
-                     <li class="nav-item dropdown-item"><a title="File Activity" class="dropdown-item">File Activity</a></li>
+                     <li class="nav-item dropdown-item"><a href="file-activity.html" title="File Activity" class="dropdown-item" >File Activity</a></li>
                      <li class="nav-item dropdown-item"><a href="dev-activity.html" title="Developer Activity" class="dropdown-item" >Developer Activity</a></li>
-                     <li class="nav-item dropdown-item"><a href="surefire-report.html" title="Surefire Report" class="dropdown-item" >Surefire Report</a></li>
+                     <li class="nav-item dropdown-item"><a title="Surefire Report" class="dropdown-item">Surefire Report</a></li>
                    </ul>
                  </li>
                </ul>
@@ -73,41 +73,44 @@
     </header>
     <main class="container-fluid">
       <div>
-<section>
-<h2><a name="File_Activity_Report"></a>File Activity Report</h2><section>
-<h3><a name="Changes_between_06-10-2022_and_07-11-2022"></a>Changes between 06-10-2022 and 07-11-2022</h3>
-<p>Total commits: 14<br />Total number of files changed: 9</p>
-<table border="0" class="table table-striped">
+<script type="text/javascript">
+//<![CDATA[
+function toggleDisplay(elementId) {
+ var elm = document.getElementById(elementId + '-error');
+ if (elm == null) {
+  elm = document.getElementById(elementId + '-failure');
+ }
+ if (elm && typeof elm.style != "undefined") {
+  if (elm.style.display == "none") {
+   elm.style.display = "";
+   document.getElementById(elementId + '-off').style.display = "none";
+   document.getElementById(elementId + '-on').style.display = "inline";
+  } else if (elm.style.display == "") {   elm.style.display = "none";
+   document.getElementById(elementId + '-off').style.display = "inline";
+   document.getElementById(elementId + '-on').style.display = "none";
+  } 
+ } 
+ }
+//]]>
+</script><section>
+<h2><a name="Surefire_Report"></a>Surefire Report</h2></section><section>
+<h2><a name="Summary"></a>Summary</h2><a name="Summary"></a><br />
+<table border="1" class="table table-striped">
 <tr class="a">
-<th>Filename</th>
-<th>Number of Times Changed</th></tr>
+<th>Tests</th>
+<th>Errors</th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
 <tr class="b">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/pom.xml"><b>pom.xml</b></a> </td>
-<td>14</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/src/site/site.xml">src/site/<b>site.xml</b></a> </td>
-<td>3</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/.github/workflows/release.yml">.github/workflows/<b>release.yml</b></a> </td>
-<td>2</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/src/site/resources/maven-theme.css">src/site/resources/<b>maven-theme.css</b></a> </td>
-<td>2</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/.github/maven_settings.xml">.github/<b>maven_settings.xml</b></a> </td>
-<td>1</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/.github/workflows/build_verification.yml">.github/workflows/<b>build_verification.yml</b></a> </td>
-<td>1</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/.gitignore"><b>.gitignore</b></a> </td>
-<td>1</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/LICENSE"><b>LICENSE</b></a> </td>
-<td>1</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://github.com/stevecrox/maven-parent/NOTICE"><b>NOTICE</b></a> </td>
-<td>1</td></tr></table></section></section>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0%</td>
+<td align="left">0</td></tr></table><br />
+<p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section>
       </div>
     </main>
 
