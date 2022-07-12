@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Site Bootstrap Skin Parent &#x2013; About</title>
+    <title>Maven Site Bootstrap Skin Parent &#x2013; Maven Site Bootstrap Skin</title>
     <link rel="icon" href="./img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -113,21 +113,22 @@
     </header>
     <main class="container-fluid">
       <div>
-<section>
-<h2><a name="About_Maven_Site_Bootstrap_Skin_Parent"></a>About Maven Site Bootstrap Skin Parent</h2><a name="About_Maven_Site_Bootstrap_Skin_Parent"></a>
-<p>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of the latest bootstrap framework.</p><section>
-<h3><a name="Project_Modules"></a>Project Modules</h3><a name="Project_Modules"></a>
-<p>This project has declared the following modules:</p>
-<table border="0" class="table table-striped">
-<tr class="a">
-<th>Name</th>
-<th>Description</th></tr>
-<tr class="b">
-<td align="left"><a href="./bootstrap-site-skin/index.html">Maven Site Bootstrap Skin</a></td>
-<td>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of the latest bootstrap framework.</td></tr>
-<tr class="a">
-<td align="left"><a href="./bootstrap-site-skin-example-parent/index.html">Maven Site Bootstrap Skin Examples Parent</a></td>
-<td>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of the latest bootstrap framework.</td></tr></table></section></section>
+<h1>Maven Site Bootstrap Skin</h1>
+<p>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of <a class="externalLink" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>. It allows you to supply a <a class="externalLink" href="https://bootswatch.com/">Bootswatch Theme</a> as a CSS file as well as other additional CSS.</p>
+<p>Skin configurations have been provided to demonstrated the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-navbar">default navbar layout</a> and the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-apache-options">Apache standard layout</a>.</p><section>
+<h2><a name="Usage"></a>Usage</h2>
+<p>To use this skin in your project, use the skin element of the site.xml site descriptor:</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">    &lt;project name=&quot;xxx&quot;&gt;
+      [...]
+      &lt;skin&gt;
+          &lt;groupId&gt;io.github.stevecrox&lt;/groupId&gt;
+          &lt;artifactId&gt;maven-site-bootstrap-skin-parent&lt;/artifactId&gt;
+          &lt;version&gt;1.0.0&lt;/version&gt;
+      &lt;/skin&gt;
+      [...]
+    &lt;/project&gt;
+</code></pre></div></section>
       </div>
     </main>
 
