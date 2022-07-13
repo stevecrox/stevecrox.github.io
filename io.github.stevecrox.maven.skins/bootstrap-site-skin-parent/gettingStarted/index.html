@@ -110,8 +110,21 @@
       <div class="p-5 bg-light text-dark rounded">
 <h1>Getting Started</h1>
 <p>The aim of this skin is to make each aspect of the layout configuration but provide sane defaults so you can minimise the amount of configuration you need to provide</p><section>
+<h2><a name="Usage"></a>Usage</h2>
+<p>To use this skin in your project, use the skin element of the site.xml site descriptor:</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">    &lt;project name=&quot;xxx&quot;&gt;
+      [...]
+      &lt;skin&gt;
+          &lt;groupId&gt;io.github.stevecrox&lt;/groupId&gt;
+          &lt;artifactId&gt;maven-site-bootstrap-skin-parent&lt;/artifactId&gt;
+          &lt;version&gt;1.0.0&lt;/version&gt;
+      &lt;/skin&gt;
+      [...]
+    &lt;/project&gt;
+</code></pre></div></section><section>
 <h2><a name="Site_Configuration"></a>Site Configuration</h2>
-<p>The following sections outline the different elements which can be configured and what each option is.</p>
+<p>This skin supports a number of configuration options, allowing you to enable various Bootstrap components and configure them to meet your needs. The configuration is specified within the <a class="externalLink" href="https://maven.apache.org/doxia/doxia-sitetools/doxia-decoration-model/decoration.html"><code>site.xml</code></a> using the <code>&lt;custom&gt;&lt;bootstrapSkin&gt;</code> element. The following links provide information on various aspects of the skins.</p>
 <ul>
 
 <li><a href="bannerbar/bannerbar.html">Banner Bar Configuration</a></li>
@@ -119,6 +132,16 @@
 <li><a href="footer.html">Footer Configuration</a></li>
 <li><a href="projectinfobar.html">Project Info Bar Configuration</a></li>
 <li><a href="sidebar.html">Sidebar Configuration</a></li>
+</ul></section><section>
+<h2><a name="Responsive_Design"></a>Responsive Design</h2>
+<p>All elements within the skin should follow responsive design using Bootstraps inherit Responsive design elements. The site layout is tested using the test widths the <a class="externalLink" href="https://getbootstrap.com/docs/5.0/layout/grid/">bootstrap grid system</a> specifies to confirm it scales correctly.</p></section><section>
+<h2><a name="Examples"></a>Examples</h2>
+<p>The layout options are sites using different <code>site.xml</code> configurations, these are provided for testing purposes but should also be useful in identifying how you can use the tool. The Source code can be <a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin">found on github</a>, you can find the site.xml files here:</p>
+<ul>
+
+<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-navbar/src/site/site.xml">Default Example</a></li>
+<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-apache-options/src/site/site.xml">Apache Image Layout Example</a></li>
+<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-all-options/src/site/site.xml">Kitchen Sink Example</a></li>
 </ul></section>
       </div>
     </main>
