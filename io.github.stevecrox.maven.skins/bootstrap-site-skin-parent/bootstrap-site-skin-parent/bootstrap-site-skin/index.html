@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Site Bootstrap Skin &#x2013; Default Options Example</title>
+    <title>Maven Site Bootstrap Skin &#x2013; </title>
     <link rel="icon" href="./img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -104,10 +104,11 @@
 
     <main class="container">
       <div class="p-5 rounded">
-<h1>Default Options Example</h1>
-<p>This example has not set any options within the site.xml and so presents the build based on the default configuration options set within the velocity template itself.</p>
-<p>The purpose of this theme is to allow us to demonstrate various capabilities of the skin to confirm nothing is obviously broken (and to also demonstrate what the skin can deliver.)</p><section>
-<h2><a name="Code_Example"></a>Code Example</h2>
+<p>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of <a class="externalLink" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>. It allows you to supply a <a class="externalLink" href="https://bootswatch.com/">Bootswatch Theme</a> as a CSS file as well as other additional CSS.</p>
+<p>Skin configurations have been provided to demonstrated the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-navbar">default navbar layout</a> and the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-apache-options">Apache standard layout</a>.</p><section>
+<h2><a name="HTML_Examples"></a>HTML Examples</h2>
+<p>This page is provided as a means to test out the default site layout and check for obvious flaws in layout.</p><section>
+<h3><a name="Code_Example"></a>Code Example</h3>
 <p>Below is some embedded JSON to confirm the prettify plugin is working as expected.</p>
 
 <div class="source"><pre class="prettyprint linenums"><code class="language-json">{  
@@ -116,7 +117,7 @@
   &quot;age&quot;:  &quot;26&quot;
 }
 </code></pre></div></section><section>
-<h2><a name="Table_Example"></a>Table Example</h2>
+<h3><a name="Table_Example"></a>Table Example</h3>
 <p>A simple table to confirm this is rendering correctly.</p>
 <table border="0" class="table table-striped">
 <thead>
@@ -132,7 +133,32 @@
 <td>Bloggs</td>
 <td>26</td></tr>
 </tbody>
-</table></section>
+</table></section></section><section>
+<h2><a name="Configuration"></a>Configuration</h2>
+<p>This page has the following sections set within it.</p><section>
+<h3><a name="Navbar"></a>Navbar</h3>
+<p>We have limited navbar configuration to the icon elements href field, this should result in the <code>navbar-brand</code> element linking to the url within the href element.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;navbar&gt;
+    &lt;icon&gt;
+      &lt;href&gt;https://stevecrox.github.io/${project.groupId}/${project.artifactId}&lt;/href&gt;
+    &lt;/icon&gt;
+  &lt;/navbar&gt;
+</code></pre></div></section><section>
+<h3><a name="Github"></a>Github</h3>
+<p>I have added a Github element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">            &lt;gitHub&gt;
+                &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
+            &lt;/gitHub&gt;
+</code></pre></div></section><section>
+<h3><a name="Twitter"></a>Twitter</h3>
+<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;twitter&gt;
+    &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
+  &lt;/twitter&gt;
+</code></pre></div></section></section>
       </div>
     </main>
 
@@ -144,6 +170,7 @@
           <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0">
             <div>Get connected with us on social networks</div>
             <div>
+            <a id="bootstrapSkin.twitter.accountIdLinkContact" href=" https://twitter.com//stevecrox0914" class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-instagram text-dark px-1"></i></a>
             <a id="bootstrapSkin.gitHub.projectIdLinkContact" href=" https://github.com/stevecrox/maven-site-bootstrap-skin" class=" p-1"><i id="bootstrapSkin.gitHub.projectIdLinkIcon" class=" bi-github text-dark px-1"></i></a>
             </div>
             <div class="py-3">
