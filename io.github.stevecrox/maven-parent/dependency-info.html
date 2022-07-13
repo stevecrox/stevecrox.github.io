@@ -19,9 +19,9 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
         <div id="projectBarContainer" class="container-fluid">
-<a href="#" id="navbarIconLink" title="Navbar Brand Icon" class="navbar-brand ps-2"></a>          <a id="navbarBrandLink" class="navbar-brand" href="#">Maven Parent</a>
+<a href="https://stevecrox.github.io/io.github.stevecrox/maven-parent//io.github.stevecrox/maven-parent" id="io.github.stevecrox.maven.skins:bootstrap-site-skin:jar:0.9.15Link" title="Navbar Brand Icon" class="navbar-brand ps-2"></a>          <a id="navbarBrandLink" class="navbar-brand" href="https://stevecrox.github.io/io.github.stevecrox/maven-parent//io.github.stevecrox/maven-parent">Maven Parent</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,48 +60,49 @@
           </div>
         </div>
       </nav>
-      <nav id="projectBar" class="navbar py-0 navbar-dark bg-primary" aria-label="projectBarList">
+      <nav id="projectBar" class="navbar py-0 navbar-dark bg-dark " aria-label="projectBarList">
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
             <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-13</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.0.9</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.15</span>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container-fluid">
-      <div>
+
+    <main class="container">
+      <div class="p-5 rounded">
 <section>
 <h2><a name="Dependency_Information"></a>Dependency Information</h2><a name="Dependency_Information"></a><section>
 <h3><a name="Apache_Maven"></a>Apache Maven</h3><a name="Apache_Maven"></a>
 <div class="source"><pre class="prettyprint linenums">&lt;dependency&gt;
   &lt;groupId&gt;io.github.stevecrox&lt;/groupId&gt;
   &lt;artifactId&gt;maven-parent&lt;/artifactId&gt;
-  &lt;version&gt;0.0.9&lt;/version&gt;
+  &lt;version&gt;0.0.8-SNAPSHOT&lt;/version&gt;
   &lt;type&gt;pom&lt;/type&gt;
 &lt;/dependency&gt;</pre></div></section><section>
 <h3><a name="Apache_Buildr"></a>Apache Buildr</h3><a name="Apache_Buildr"></a>
-<div class="source"><pre class="prettyprint linenums">'io.github.stevecrox:maven-parent:pom:0.0.9'</pre></div></section><section>
+<div class="source"><pre class="prettyprint linenums">'io.github.stevecrox:maven-parent:pom:0.0.8-SNAPSHOT'</pre></div></section><section>
 <h3><a name="Apache_Ivy"></a>Apache Ivy</h3><a name="Apache_Ivy"></a>
-<div class="source"><pre class="prettyprint linenums">&lt;dependency org=&quot;io.github.stevecrox&quot; name=&quot;maven-parent&quot; rev=&quot;0.0.9&quot;&gt;
+<div class="source"><pre class="prettyprint linenums">&lt;dependency org=&quot;io.github.stevecrox&quot; name=&quot;maven-parent&quot; rev=&quot;0.0.8-SNAPSHOT&quot;&gt;
   &lt;artifact name=&quot;maven-parent&quot; type=&quot;pom&quot; /&gt;
 &lt;/dependency&gt;</pre></div></section><section>
 <h3><a name="Groovy_Grape"></a>Groovy Grape</h3><a name="Groovy_Grape"></a>
 <div class="source"><pre class="prettyprint linenums">@Grapes(
-@Grab(group='io.github.stevecrox', module='maven-parent', version='0.0.9')
+@Grab(group='io.github.stevecrox', module='maven-parent', version='0.0.8-SNAPSHOT')
 )</pre></div></section><section>
 <h3><a name="Gradle.2FGrails"></a>Gradle/Grails</h3><a name="Gradle.2FGrails"></a>
-<div class="source"><pre class="prettyprint linenums">compile 'io.github.stevecrox:maven-parent:0.0.9'</pre></div></section><section>
+<div class="source"><pre class="prettyprint linenums">compile 'io.github.stevecrox:maven-parent:0.0.8-SNAPSHOT'</pre></div></section><section>
 <h3><a name="Scala_SBT"></a>Scala SBT</h3><a name="Scala_SBT"></a>
-<div class="source"><pre class="prettyprint linenums">libraryDependencies += &quot;io.github.stevecrox&quot; % &quot;maven-parent&quot; % &quot;0.0.9&quot;</pre></div></section><section>
+<div class="source"><pre class="prettyprint linenums">libraryDependencies += &quot;io.github.stevecrox&quot; % &quot;maven-parent&quot; % &quot;0.0.8-SNAPSHOT&quot;</pre></div></section><section>
 <h3><a name="Leiningen"></a>Leiningen</h3><a name="Leiningen"></a>
-<div class="source"><pre class="prettyprint linenums">[io.github.stevecrox/maven-parent &quot;0.0.9&quot;]</pre></div></section></section>
+<div class="source"><pre class="prettyprint linenums">[io.github.stevecrox/maven-parent &quot;0.0.8-SNAPSHOT&quot;]</pre></div></section></section>
       </div>
     </main>
 
-  <footer class="page-footer font-small py-4 bg-primary text-light">
+  <footer class="footer mt-auto py-4 bg-light">
     <div class="container-fluid text-md-left">
         <div class="row">
           <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0">
