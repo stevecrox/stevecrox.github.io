@@ -177,7 +177,41 @@ Well maybe toast is better</p>
 
 <p>And I think it went Oh oh oh!</p>
 </li>
-</ul></section></section>
+</ul></section></section><section>
+<h2><a name="Configuration"></a>Configuration</h2>
+<p>The following sections identify the various custom settings used within the site.xml and explains what we expect to result on the page.</p><section>
+<h3><a name="Navbar"></a>Navbar</h3>
+<p>We have limited navbar configuration to the icon elements href field, this should result in the <code>navbar-brand</code> element linking to the url within the href element.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;navbar&gt;
+    &lt;icon&gt;
+      &lt;href&gt;https://stevecrox.github.io/${project.groupId}/${project.artifactId}&lt;/href&gt;
+    &lt;/icon&gt;
+  &lt;/navbar&gt;
+</code></pre></div></section><section>
+<h3><a name="Project_Bar"></a>Project Bar</h3>
+<p>The following secctions turn of all elements found within the</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;projectbar&gt;
+    &lt;skipBreadcrumb&gt;true&lt;/skipBreadcrumb&gt;
+    &lt;skipGenerationDate&gt;true&lt;/skipGenerationDate&gt;
+    &lt;skipGenerationVersion&gt;true&lt;/skipGenerationVersion&gt;
+  &lt;/projectbar&gt;
+</code></pre></div></section><section>
+<h3><a name="Github"></a>Github</h3>
+<p>I have added a Github element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">            &lt;gitHub&gt;
+                &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
+            &lt;/gitHub&gt;
+</code></pre></div></section><section>
+<h3><a name="Twitter"></a>Twitter</h3>
+<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;twitter&gt;
+    &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
+  &lt;/twitter&gt;
+</code></pre></div></section></section>
       </div>
     </main>
 
