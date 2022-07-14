@@ -112,8 +112,8 @@
       <div class="p-5 rounded">
 <p>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of <a class="externalLink" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>. It allows you to supply a <a class="externalLink" href="https://bootswatch.com/">Bootswatch Theme</a> as a CSS file as well as other additional CSS.</p>
 <p>Skin configurations have been provided to demonstrated the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-navbar">default navbar layout</a> and the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-apache-options">Apache standard layout</a>.</p><section>
-<h2><a name="HTML_Examples"></a>HTML Examples</h2>
-<p>This page is provided as a means to test out the default site layout and check for obvious flaws in layout.</p><section>
+<h2><a name="Markdown_Render_Tests"></a>Markdown Render Tests</h2>
+<p>The below sections are provided to test various Markdown elements have translated correctly into a maven site.</p><section>
 <h3><a name="Code_Example"></a>Code Example</h3>
 <p>Below is some embedded JSON to confirm the prettify plugin is working as expected.</p>
 
@@ -139,31 +139,73 @@
 <td>Bloggs</td>
 <td>26</td></tr>
 </tbody>
-</table></section></section><section>
-<h2><a name="Configuration"></a>Configuration</h2>
-<p>This page has the following sections set within it.</p><section>
-<h3><a name="Navbar"></a>Navbar</h3>
-<p>We have limited navbar configuration to the icon elements href field, this should result in the <code>navbar-brand</code> element linking to the url within the href element.</p>
+</table></section><section>
+<h3><a name="Emphasis"></a>Emphasis</h3>
+<p>I just love <b>bold text</b> using stars, if we use a single star we create <i>italic text</i> and similarly <i>one underscore</i> should work.</p>
+<p>When we <i><b>use three stars</b></i> it becomes bold and italic, similarly <i><b>three underscores</b></i> should work</p></section><section>
+<h3><a name="Blockquotes"></a>Blockquotes</h3>
+<p>Blockquotes can contain multiple paragraphs. Add a &gt; on the blank lines between the paragraphs.</p>
+<blockquote>
 
-<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;navbar&gt;
-    &lt;icon&gt;
-      &lt;href&gt;https://stevecrox.github.io/${project.groupId}/${project.artifactId}&lt;/href&gt;
-    &lt;/icon&gt;
-  &lt;/navbar&gt;
+<p>This skin is the best thing ever invented and I include toast in that statement
+&#x2026;
+Well maybe toast is better</p>
+<blockquote>
+
+<p>This line should be nested</p>
+</blockquote>
+</blockquote></section><section>
+<h3><a name="Lists"></a>Lists</h3>
+<p>Below is an ordered:</p>
+<ol style="list-style-type: decimal">
+
+<li>Bread</li>
+<li>Toaster</li>
+<li>Butter</li>
+</ol>
+<p>This list is unordered:</p>
+<ul>
+
+<li>
+
+<p>Dance All Night</p>
+</li>
+<li>
+
+<p>To the</p>
+<p>Best Song Ever (Best song eve should be indented and attached to bullet 2)</p>
+</li>
+<li>
+
+<p>And I think it went Oh oh oh!</p>
+</li>
+</ul></section></section><section>
+<h2><a name="Configuration"></a>Configuration</h2>
+<p>The following sections identify the various custom settings used within the site.xml and explains what we expect to result on the page.</p><section>
+<h3><a name="Navbar"></a>Navbar</h3>
+<p>The Navbar is enabled should contain a logo next to the brand which includes alternative text and links back to this page. You will notice that the menu links in the Navbar are normally weighted to the right of the Navbar the <code>menuOrientation</code> field here should move the menu so it sits next to the brand. Sub menu overlays should be adjusted to appear on the right on the menu dropdown.</p>
+
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">&lt;navbar&gt;
+  &lt;enabled&gt;true&lt;/enabled&gt;
+  &lt;icon&gt;
+    &lt;href&gt;https://stevecrox.github.io/${project.groupId}/${project.artifactId}&lt;/href&gt;
+  &lt;/icon&gt;
+  &lt;menuOrientation&gt;left&lt;/menuOrientation&gt;
+&lt;/navbar&gt;
 </code></pre></div></section><section>
 <h3><a name="Github"></a>Github</h3>
 <p>I have added a Github element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
 
-<div class="source"><pre class="prettyprint linenums"><code class="language-xml">            &lt;gitHub&gt;
-                &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
-            &lt;/gitHub&gt;
+<div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;gitHub&gt;
+    &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
+  &lt;/gitHub&gt;
 </code></pre></div></section><section>
 <h3><a name="Twitter"></a>Twitter</h3>
 <p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
 
 <div class="source"><pre class="prettyprint linenums"><code class="language-xml">  &lt;twitter&gt;
     &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
-  &lt;/twitter&gt;
+&lt;/twitter&gt;
 </code></pre></div></section></section>
       </div>
     </main>
