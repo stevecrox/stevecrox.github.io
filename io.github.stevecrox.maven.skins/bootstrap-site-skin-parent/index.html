@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Site Bootstrap Skin Parent &#x2013; Maven Site Bootstrap Skin</title>
+    <title>Maven Site Bootstrap Skin Parent &#x2013; </title>
     <link rel="icon" href="./img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -21,8 +21,8 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
         <div id="projectBarContainer" class="container-fluid">
-<a href="https://stevecrox.github.io/io.github.stevecrox.maven.skins/bootstrap-site-skin-parent//io.github.stevecrox.maven.skins/bootstrap-site-skin-parent" id="io.github.stevecrox.maven.skins:bootstrap-site-skin:jar:0.9.15Link" title="Navbar Brand Icon" class="navbar-brand ps-2"></a>          <a id="navbarBrandLink" class="navbar-brand" href="https://stevecrox.github.io/io.github.stevecrox.maven.skins/bootstrap-site-skin-parent//io.github.stevecrox.maven.skins/bootstrap-site-skin-parent">Maven Site Bootstrap Skin Parent</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<a href="https://stevecrox.github.io/io.github.stevecrox.maven.skins/bootstrap-site-skin-parent//io.github.stevecrox.maven.skins/bootstrap-site-skin-parent" id="io.github.stevecrox.maven.skins:bootstrap-site-skin:jar:0.9.16Link" title="Navbar Brand Icon" class="navbar-brand text-wrap ps-2"> Maven Site Bootstrap Skin Parent
+</a>          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div id="navbarCollapse" class="collapse navbar-collapse justify-content-end">
@@ -31,7 +31,7 @@
                <a class="nav-link dropdown-toggle" href="#" id="Getting StartedMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Getting Started <b class="caret"></b></a>
                <ul class="dropdown-menu" aria-labelledby="Getting StartedMenuDropdown">
                  <li class="nav-item dropdown-item" id="OverviewDropdown"><a href="gettingStarted/index.html" title="Overview" class="dropdown-item" >Overview</a></li>
-                 <li class="dropdown-submenu">
+                 <li class="nav-item dropdown-item dropdown-submenu">
                    <a href="" title="Configuration" class="dropdown-item" >Configuration</a>
                    <ul id="Getting StartedMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="gettingStarted/bannerbar/bannerbar.html" title="Banner Bar Configuration" class="dropdown-item" >Banner Bar Configuration</a></li>
@@ -68,7 +68,7 @@
              <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" id="Project DocumentationMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Project Documentation <b class="caret"></b></a>
                <ul class="dropdown-menu" aria-labelledby="Project DocumentationMenuDropdown">
-                 <li class="dropdown-submenu">
+                 <li class="nav-item dropdown-item dropdown-submenu">
                    <a href="project-info.html" title="Project Information" class="dropdown-item" >Project Information</a>
                    <ul id="Project DocumentationMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="dependency-convergence.html" title="Dependency Convergence" class="dropdown-item" >Dependency Convergence</a></li>
@@ -85,7 +85,7 @@
                      <li class="nav-item dropdown-item"><a href="team.html" title="Team" class="dropdown-item" >Team</a></li>
                    </ul>
                  </li>
-                 <li class="dropdown-submenu">
+                 <li class="nav-item dropdown-item dropdown-submenu">
                    <a href="project-reports.html" title="Project Reports" class="dropdown-item" >Project Reports</a>
                    <ul id="Project DocumentationMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="changelog.html" title="Change Log" class="dropdown-item" >Change Log</a></li>
@@ -106,7 +106,7 @@
           <div id="projectBaDateVersionContainer" class="justify-content-end">
             <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-15</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.15</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.16</span>
           </div>
         </div>
       </nav>
@@ -114,13 +114,21 @@
 
     <main class="container">
       <div class="p-5 rounded">
-<h1>Maven Site Bootstrap Skin</h1>
-<p>The Maven Site Bootstrap Skin is an Apache Maven site skin built on top of <a class="externalLink" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a>. It allows you to supply a <a class="externalLink" href="https://bootswatch.com/">Bootswatch Theme</a> as a CSS file as well as other additional CSS.</p>
-<p>Skin configurations have been provided to demonstrated the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-navbar">default navbar layout</a> and the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-apache-options">Apache standard layout</a>.</p><section>
+<p>Apache Maven is able to generate websites containing information about the project, these are generated by the <a class="externalLink" href="https://maven.apache.org/plugins/maven-site-plugin/">maven-site-plugin</a>. The style and design of these sites can be modified through the use of &#x2018;skins&#x2019;, the <a class="externalLink" href="https://maven.apache.org/skins/maven-default-skin/">default skin</a> has not been updated since it was created. This project aims to provide a <a class="externalLink" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</a> based skin which follows the <a class="externalLink" href="https://getbootstrap.com/docs/5.0/examples/">design layouts</a> the bootstrap project provides. It allows you to supply a <a class="externalLink" href="https://bootswatch.com/">Bootswatch Theme</a> as a CSS file as well as other additional CSS.</p>
+<p>The skin allows a number of configuration options allowing you to alter the layout to suit your design tastes. Example skin configurations have been provided to demonstrate the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-navbar">default navbar layout</a> and the <a class="externalLink" href="https://stevecrox.github.io/io.github.stevecrox/maven-site-bootstrap-skin-parent/boostrap-skin-apache-options">Apache standard layout</a>.</p><section>
+<h2><a name="Features"></a>Features</h2>
+<p>The main features offered by the skin are:</p>
+<ul>
+
+<li>Bootstrap 5</li>
+<li>Bootstrap Icons</li>
+<li>Responsive Design</li>
+<li>Theming Support</li>
+</ul></section><section>
 <h2><a name="Usage"></a>Usage</h2>
 <p>To use this skin in your project, use the skin element of the site.xml site descriptor:</p>
 
-<div class="source"><pre class="prettyprint linenums"><code class="language-xml">    &lt;project name=&quot;xxx&quot;&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">    &lt;project name=&quot;xxx&quot;&gt;
       [...]
       &lt;skin&gt;
           &lt;groupId&gt;io.github.stevecrox&lt;/groupId&gt;
@@ -129,7 +137,15 @@
       &lt;/skin&gt;
       [...]
     &lt;/project&gt;
-</code></pre></div></section>
+</code></pre></div></section><section>
+<h2><a name="Acknowledgement"></a>Acknowledgement</h2>
+<p>The original goal was to update the <a class="externalLink" href="https://maven.apache.org/skins/maven-fluido-skin">Maven Fluido Skin</a> to Bootstrap 5. This encountered several issues:</p>
+<ul>
+
+<li>Migrating from Bootstrap 2.8.2 to Bootstrap 3 required significant modifications</li>
+<li>The project wishes to maintain the default skin layout and Bootstrap classes didn't easily confirm to this</li>
+<li>There were a number of use cases which were important due to the layout choices which made upgrading complex</li>
+</ul></section>
       </div>
     </main>
 
@@ -141,7 +157,7 @@
           <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0">
             <div>Get connected with us on social networks</div>
             <div>
-            <a id="bootstrapSkin.twitter.accountIdLinkContact" href=" https://twitter.com//stevecrox0914" class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-instagram text-dark px-1"></i></a>
+            <a id="bootstrapSkin.twitter.accountIdLinkContact" href=" https://twitter.com//stevecrox0914" class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-twitter text-dark px-1"></i></a>
             <a id="bootstrapSkin.gitHub.projectIdLinkContact" href=" https://github.com/stevecrox/maven-site-bootstrap-skin" class=" p-1"><i id="bootstrapSkin.gitHub.projectIdLinkIcon" class=" bi-github text-dark px-1"></i></a>
             </div>
             <div class="py-3">

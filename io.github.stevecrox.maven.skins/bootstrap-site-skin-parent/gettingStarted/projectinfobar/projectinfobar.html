@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Site Bootstrap Skin Parent &#x2013; Banner Bar</title>
+    <title>Maven Site Bootstrap Skin Parent &#x2013; Project Information Bar</title>
     <link rel="icon" href="../../img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
@@ -34,7 +34,7 @@
                  <li class="nav-item dropdown-item dropdown-submenu">
                    <a href="../../" title="Configuration" class="dropdown-item" >Configuration</a>
                    <ul id="Getting StartedMenuSubMenuDropdown" class="dropdown-menu submenu">
-                     <li class="nav-item dropdown-item"><a title="Banner Bar Configuration" class="dropdown-item">Banner Bar Configuration</a></li>
+                     <li class="nav-item dropdown-item"><a href="../../gettingStarted/bannerbar/bannerbar.html" title="Banner Bar Configuration" class="dropdown-item" >Banner Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/navbar/navbar.html" title="Navbar Configuration" class="dropdown-item" >Navbar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/projectinfobar.html" title="Project Info Bar Configuration" class="dropdown-item" >Project Info Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/sidebar.html" title="Sidebar Configuration" class="dropdown-item" >Sidebar Configuration</a></li>
@@ -114,35 +114,50 @@
 
     <main class="container">
       <div class="p-5 rounded">
-<h1>Banner Bar</h1>
+<h1>Project Information Bar</h1>
 <hr />
-Most Apache Maven sites have a 'banner' along the top this typically contains two icons referencing the Apache project and a proejct logo as shown below.
 
-<p><img src="bannerbar.png" alt="" /></p>
-<p>The maven-site-plugin supports the definition of the icons using &#x2018;bannerLeft&#x2019; and &#x2018;bannerRight&#x2019; elements. Below is an example of these sections being defined within a <code>site.xml</code> file.</p>
+<p>The Project Information Bar is a navigation bar which contains the information found on traditional Apache Site Layouts, this includes &#x2018;Breadcrumbs&#x2019;, the publish date of the documentation and the version of software published.</p>
+<p><img src="" alt="" /></p><section>
+<h2><a name="Breadcrumbs"></a>Breadcrumbs</h2><section>
+<h3><a name="Enable.2FDisable_Breadcrumbs"></a>Enable/Disable Breadcrumbs</h3>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
-    [...]
-    &lt;bannerLeft&gt;
-        &lt;href&gt;https://github.com/stevecrox/maven-site-bootstrap-skin&lt;/href&gt;
-        &lt;border&gt;0&lt;/border&gt;
-        &lt;width&gt;328px&lt;/width&gt;
-        &lt;height&gt;116px&lt;/height&gt;
-        &lt;src&gt;image/example-banner-left.png&lt;/src&gt;
-    &lt;/bannerLeft&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+    &lt;custom&gt;
+        &lt;bootstrapSkin&gt;
+          &lt;projectbar&gt;
+            &lt;skipBreadcrumb&gt;true&lt;/skipBreadcrumb&gt;
+          &lt;/projectbar&gt;
+        &lt;/bootstrapSkin&gt;
+    &lt;/custom&gt;
+  &lt;/project&gt;
+</code></pre></div></section></section><section>
+<h2><a name="Last_Published_Date"></a>Last Published Date</h2><section>
+<h3><a name="Enable.2FDisable_Last_Published_Date"></a>Enable/Disable Last Published Date</h3>
 
-    &lt;bannerRight&gt;
-        &lt;href&gt;https://github.com/stevecrox/maven-site-bootstrap-skin&lt;/href&gt;
-        &lt;border&gt;0&lt;/border&gt;
-        &lt;width&gt;256px&lt;/width&gt;
-        &lt;height&gt;125px&lt;/height&gt;
-        &lt;src&gt;image/example-banner-right.png&lt;/src&gt;
-    &lt;/bannerRight&gt;
-    [...]
-&lt;/project&gt;
-</code></pre></div>
-<p>The attributes of these elements should match the attributes of an <code>&lt;img&gt;</code> element within HTML. The skin will extract these values and create a floating container at the top of the page and populate images with the information provided.</p>
-<p>If these sections are left blank then no banner is added to the page, as a minimum the banner requires a <code>alt</code> or <code>src</code> attribute for something to be displayed.</p>
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+    &lt;custom&gt;
+        &lt;bootstrapSkin&gt;
+          &lt;projectbar&gt;
+            &lt;skipGenerationDate&gt;true&lt;/skipGenerationDate&gt;
+          &lt;/projectbar&gt;
+        &lt;/bootstrapSkin&gt;
+    &lt;/custom&gt;
+  &lt;/project&gt;
+</code></pre></div></section></section><section>
+<h2><a name="Last_Published_Version"></a>Last Published Version</h2><section>
+<h3><a name="Enable.2FDisable_Last_Published_Version"></a>Enable/Disable Last Published Version</h3>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+    &lt;custom&gt;
+        &lt;bootstrapSkin&gt;
+          &lt;projectbar&gt;
+            &lt;skipGenerationVersion&gt;true&lt;/skipGenerationVersion&gt;
+          &lt;/projectbar&gt;
+        &lt;/bootstrapSkin&gt;
+    &lt;/custom&gt;
+  &lt;/project&gt;
+</code></pre></div></section></section>
       </div>
     </main>
 
