@@ -36,7 +36,7 @@
                    <ul id="Getting StartedMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/bannerbar/bannerbar.html" title="Banner Bar Configuration" class="dropdown-item" >Banner Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/navbar/navbar.html" title="Navbar Configuration" class="dropdown-item" >Navbar Configuration</a></li>
-                     <li class="nav-item dropdown-item"><a href="../../gettingStarted/projectinfobar.html" title="Project Info Bar Configuration" class="dropdown-item" >Project Info Bar Configuration</a></li>
+                     <li class="nav-item dropdown-item"><a title="Project Info Bar Configuration" class="dropdown-item">Project Info Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/sidebar.html" title="Sidebar Configuration" class="dropdown-item" >Sidebar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../gettingStarted/footer.html" title="Footer Configuration" class="dropdown-item" >Footer Configuration</a></li>
                    </ul>
@@ -104,7 +104,7 @@
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
-            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-15</span>
+            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-18</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
             <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.16</span>
           </div>
@@ -118,43 +118,60 @@
 <hr />
 
 <p>The Project Information Bar is a navigation bar which contains the information found on traditional Apache Site Layouts, this includes &#x2018;Breadcrumbs&#x2019;, the publish date of the documentation and the version of software published.</p>
-<p><img src="" alt="" /></p><section>
-<h2><a name="Breadcrumbs"></a>Breadcrumbs</h2><section>
+<p><img src="projectinfobar.png" alt="" /></p><section>
+<h2><a name="Breadcrumbs"></a>Breadcrumbs</h2>
+<p>Breadcrumbs will be placed in the Project Bar.</p>
+<p><img src="breadcrumbs.png" alt="" /></p>
+<p>This can be implemented by adding breadcrumb definitions to the <code>site.xml</code>.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+    &lt;breadcrumbs&gt;
+        &lt;item name=.. href=.. img=.. position=.. alt=.. border=.. width=.. height=.. target=.. title=.. /&gt;
+    &lt;/breadcrumbs&gt;
+  &lt;/project&gt;
+</code></pre></div><section>
 <h3><a name="Enable.2FDisable_Breadcrumbs"></a>Enable/Disable Breadcrumbs</h3>
 
 <div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
     &lt;custom&gt;
-        &lt;bootstrapSkin&gt;
-          &lt;projectbar&gt;
-            &lt;skipBreadcrumb&gt;true&lt;/skipBreadcrumb&gt;
-          &lt;/projectbar&gt;
-        &lt;/bootstrapSkin&gt;
+      &lt;bootstrapSkin&gt;
+        &lt;projectbar&gt;
+          &lt;skipBreadcrumb&gt;true&lt;/skipBreadcrumb&gt;
+        &lt;/projectbar&gt;
+      &lt;/bootstrapSkin&gt;
     &lt;/custom&gt;
   &lt;/project&gt;
-</code></pre></div></section></section><section>
-<h2><a name="Last_Published_Date"></a>Last Published Date</h2><section>
+</code></pre></div></section><section>
 <h3><a name="Enable.2FDisable_Last_Published_Date"></a>Enable/Disable Last Published Date</h3>
+<p>You can toggle the display of the Last Publish Date by setting the <code>skipGenerationDate</code> value within the configuration.</p>
 
 <div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
     &lt;custom&gt;
-        &lt;bootstrapSkin&gt;
-          &lt;projectbar&gt;
-            &lt;skipGenerationDate&gt;true&lt;/skipGenerationDate&gt;
-          &lt;/projectbar&gt;
-        &lt;/bootstrapSkin&gt;
+      &lt;bootstrapSkin&gt;
+        &lt;projectbar&gt;
+          &lt;skipGenerationDate&gt;true&lt;/skipGenerationDate&gt;
+        &lt;/projectbar&gt;
+      &lt;/bootstrapSkin&gt;
     &lt;/custom&gt;
   &lt;/project&gt;
-</code></pre></div></section></section><section>
-<h2><a name="Last_Published_Version"></a>Last Published Version</h2><section>
+</code></pre></div></section><section>
+<h3><a name="Last_Publish_Date_Format"></a>Last Publish Date Format</h3>
+<p>You are able to modify the display properties for the date publish, the default value is: <code>yyyy-MM-dd</code>.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+    &lt;publishDate format=&quot;&quot; /&gt;
+  &lt;/project&gt;
+</code></pre></div></section><section>
 <h3><a name="Enable.2FDisable_Last_Published_Version"></a>Enable/Disable Last Published Version</h3>
+<p>You can toggle the display of the Last Publish Version by setting the <code>skipGenerationVersion</code> value within the configuration.</p>
 
 <div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
     &lt;custom&gt;
-        &lt;bootstrapSkin&gt;
-          &lt;projectbar&gt;
-            &lt;skipGenerationVersion&gt;true&lt;/skipGenerationVersion&gt;
-          &lt;/projectbar&gt;
-        &lt;/bootstrapSkin&gt;
+      &lt;bootstrapSkin&gt;
+        &lt;projectbar&gt;
+          &lt;skipGenerationVersion&gt;true&lt;/skipGenerationVersion&gt;
+        &lt;/projectbar&gt;
+      &lt;/bootstrapSkin&gt;
     &lt;/custom&gt;
   &lt;/project&gt;
 </code></pre></div></section></section>

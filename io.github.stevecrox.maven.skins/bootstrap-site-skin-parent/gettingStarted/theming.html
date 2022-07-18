@@ -36,7 +36,7 @@
                    <ul id="Getting StartedMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="../gettingStarted/bannerbar/bannerbar.html" title="Banner Bar Configuration" class="dropdown-item" >Banner Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../gettingStarted/navbar/navbar.html" title="Navbar Configuration" class="dropdown-item" >Navbar Configuration</a></li>
-                     <li class="nav-item dropdown-item"><a href="../gettingStarted/projectinfobar.html" title="Project Info Bar Configuration" class="dropdown-item" >Project Info Bar Configuration</a></li>
+                     <li class="nav-item dropdown-item"><a href="../gettingStarted/projectinfobar/projectinfobar.html" title="Project Info Bar Configuration" class="dropdown-item" >Project Info Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../gettingStarted/sidebar.html" title="Sidebar Configuration" class="dropdown-item" >Sidebar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../gettingStarted/footer.html" title="Footer Configuration" class="dropdown-item" >Footer Configuration</a></li>
                    </ul>
@@ -104,7 +104,7 @@
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
-            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-15</span>
+            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-18</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
             <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.16</span>
           </div>
@@ -116,6 +116,37 @@
       <div class="p-5 rounded">
 <h1>Theming</h1>
 <hr />
+
+<p>The Bootstrap default theme is used unless either a Bootswatch theme is specified or a <code>css/maven-theme.css</code> file has been included within the site resources. Below is an example of adding the <a class="externalLink" href="https://bootswatch.com/darkly/">darkly bootswatch theme</a> to the site.</p><section>
+<h2><a name="BootSwatch_Theming"></a>BootSwatch Theming</h2>
+<p><a class="externalLink" href="https://bootswatch.com/">Bootswatch</a> is a website which hosts a variety of themes for Bootstrap. To use you need to define the desired style within the custom configuration. The value is based on the name of the theme for example.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">    &lt;project name=&quot;xxx&quot;&gt;
+      [...]
+      &lt;custom&gt;
+        &lt;bootstrapSkin&gt;
+          &lt;bootswatchStyle&gt;darkly&lt;/bootswatchStyle&gt;
+        &lt;/bootstrapSkin&gt;
+      &lt;/custom&gt;
+      [...]
+    &lt;/project&gt;
+</code></pre></div></section><section>
+<h2><a name="CSS"></a>CSS</h2>
+<p>The skin includes a hook for two additional CSS files:</p>
+<ul>
+
+<li><code>css/maven-theme.css</code></li>
+<li><code>css/site.css</code></li>
+</ul>
+<p>When building a Maven Site if you place a file with these names under the following folder structure the Maven site Plugin will incorporate them into the result.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-json">+- src/
+   +- site/
+      +- resources/
+         +- css/
+            +- maven-theme.css
+            +- site.css
+</code></pre></div></section>
       </div>
     </main>
 
