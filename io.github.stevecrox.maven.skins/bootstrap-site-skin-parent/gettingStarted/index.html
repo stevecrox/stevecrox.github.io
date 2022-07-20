@@ -46,9 +46,10 @@
              <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" href="#" id="LayoutsMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layouts <b class="caret"></b></a>
                <ul class="dropdown-menu" aria-labelledby="LayoutsMenuDropdown">
-                 <li class="nav-item dropdown-item" id="Default ExampleDropdown"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-navbar/index.html" title="Default Example" class="dropdown-item" >Default Example</a></li>
+                 <li class="nav-item dropdown-item" id="Default ExampleDropdown"><a href="../bootstrap-site-skin/index.html" title="Default Example" class="dropdown-item" >Default Example</a></li>
                  <li class="nav-item dropdown-item" id="Apache Layout ExampleDropdown"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-apache-options/index.html" title="Apache Layout Example" class="dropdown-item" >Apache Layout Example</a></li>
                  <li class="nav-item dropdown-item" id="Kitchen Sink ExampleDropdown"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-all-options/index.html" title="Kitchen Sink Example" class="dropdown-item" >Kitchen Sink Example</a></li>
+                 <li class="nav-item dropdown-item" id="MkDocs ExampleDropdown"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-navbar/index.html" title="MkDocs Example" class="dropdown-item" >MkDocs Example</a></li>
                </ul>
              </li>
              <li class="nav-item dropdown">
@@ -105,7 +106,7 @@
           <div id="projectBaDateVersionContainer" class="justify-content-end">
             <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-20</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.18</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.19</span>
           </div>
         </div>
       </nav>
@@ -157,12 +158,31 @@ The aim of this skin is to make each aspect of the layout configuration but prov
 <p>All elements within the skin should follow responsive design using Bootstraps inherit Responsive design elements. The site layout is tested using the test widths the <a class="externalLink" href="https://getbootstrap.com/docs/5.0/layout/grid/">bootstrap grid system</a> specifies to confirm it scales correctly.</p></section><section>
 <h2><a name="Examples"></a>Examples</h2>
 <p>The layout options are sites using different <code>site.xml</code> configurations, these are provided for testing purposes but should also be useful in identifying how you can use the tool. The Source code can be <a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin">found on github</a>, you can find the site.xml files here:</p>
-<ul>
+<table border="0" class="table table-striped">
+<thead>
 
-<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-navbar/src/site/site.xml">Default Example</a></li>
-<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-apache-options/src/site/site.xml">Apache Image Layout Example</a></li>
-<li><a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin/blob/main/bootstrap-site-skin-example-parent/boostrap-site-skin-all-options/src/site/site.xml">Kitchen Sink Example</a></li>
-</ul></section>
+<tr class="a">
+<th>Layout</th>
+<th>Description</th></tr>
+</thead><tbody>
+
+<tr class="b">
+<td align="left"><a href="../bootstrap-site-skin/index.html">Default</a></td>
+<td>The Layout with no custom configuration options set.</td></tr>
+<tr class="a">
+<td align="left"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-apache-options/index.html">Apache</a></td>
+<td>This layout recreates the Apache website structure, it also has a theme applied</td></tr>
+<tr class="b">
+<td align="left"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-all-options/index.html">Kitchen</a></td>
+<td>This layout modifies every single configuration option away from the default values</td></tr>
+<tr class="a">
+<td align="left"><a href="../bootstrap-site-skin-example-parent/boostrap-site-skin-navbar/index.html">MkDocs</a></td>
+<td>This Layout recreates a MkDocs structure.</td></tr>
+<tr class="b">
+<td align="left"><a class="externalLink" href="https://maven.apache.org/skins/maven-default-skin/sample/">Maven Default Site</a></td>
+<td>A link to the default Maven Skin for comparison.</td></tr>
+</tbody>
+</table></section>
       </div>
     </main>
 
