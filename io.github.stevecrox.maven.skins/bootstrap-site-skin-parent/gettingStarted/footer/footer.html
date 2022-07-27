@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="#generatedBy()" />
-    <title>Maven Site Bootstrap Skin Parent &#x2013; Project Information Bar</title>
+    <title>Maven Site Bootstrap Skin Parent &#x2013; Footer</title>
     <link rel="icon" href="../../img/favicons/favicon.ico">
     <!-- CSS Stylesheets, site.css is included so downstream projects can override them as appropriate. -->
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
@@ -35,7 +35,7 @@
                    <ul id="Getting StartedMenuSubMenuDropdown" class="dropdown-menu submenu">
                      <li class="nav-item dropdown-item"><a href="../../../../gettingStarted/bannerbar/bannerbar.html" title="Banner Bar Configuration" class="dropdown-item" >Banner Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../../../gettingStarted/navbar/navbar.html" title="Navbar Configuration" class="dropdown-item" >Navbar Configuration</a></li>
-                     <li class="nav-item dropdown-item"><a title="Project Info Bar Configuration" class="dropdown-item">Project Info Bar Configuration</a></li>
+                     <li class="nav-item dropdown-item"><a href="../../../../gettingStarted/projectinfobar/projectinfobar.html" title="Project Info Bar Configuration" class="dropdown-item" >Project Info Bar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../../../gettingStarted/sidebar.html" title="Sidebar Configuration" class="dropdown-item" >Sidebar Configuration</a></li>
                      <li class="nav-item dropdown-item"><a href="../../../../gettingStarted/footer.html" title="Footer Configuration" class="dropdown-item" >Footer Configuration</a></li>
                    </ul>
@@ -114,66 +114,183 @@
 
     <main class="container">
       <div class="p-5 rounded">
-<h1>Project Information Bar</h1>
+<h1>Footer</h1>
 <hr />
+The footer allows you to insert various kinds of contact information.
 
-<p>The Project Information Bar is a navigation bar which contains the information found on traditional Apache Site Layouts, this includes &#x2018;Breadcrumbs&#x2019;, the publish date of the documentation and the version of software published.</p>
-<p><img src="projectinfobar.png" alt="" /></p><section>
-<h2><a name="Breadcrumbs"></a>Breadcrumbs</h2>
-<p>Breadcrumbs will be placed in the Project Bar.</p>
-<p><img src="breadcrumbs.png" alt="" /></p>
-<p>This can be implemented by adding breadcrumb definitions to the <code>site.xml</code>.</p>
+<p><img src="footer.png" alt="" /></p>
+<p>Each element within the footer requires user information to be included within the custom element of the <code>site.xml</code>. This page will outline each option. The current design splits the footer into two vertical columns. The left side contains contact information, while the right contains social media, copyright and powered by sections.</p><section>
+<h2><a name="Footer_Style"></a>Footer Style</h2>
+<p>You are able to modify the CSS classes applied to the footer element on the HTML page by setting the <code>&lt;footer&gt;&lt;style&gt;</code> element. The default value is <code>footer mt-auto py-4 bg-light</code>.</p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
-    &lt;breadcrumbs&gt;
-        &lt;item name=.. href=.. img=.. position=.. alt=.. border=.. width=.. height=.. target=.. title=.. /&gt;
-    &lt;/breadcrumbs&gt;
-  &lt;/project&gt;
-</code></pre></div><section>
-<h3><a name="Enable.2FDisable_Breadcrumbs"></a>Enable/Disable Breadcrumbs</h3>
-
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
-    &lt;custom&gt;
-      &lt;bootstrapSkin&gt;
-        &lt;projectbar&gt;
-          &lt;skipBreadcrumb&gt;true&lt;/skipBreadcrumb&gt;
-        &lt;/projectbar&gt;
-      &lt;/bootstrapSkin&gt;
-    &lt;/custom&gt;
-  &lt;/project&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;footer&gt;
+        &lt;style&gt;footer mt-auto py-4 bg-light&lt;/style&gt;
+      &lt;/footer&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
 </code></pre></div></section><section>
-<h3><a name="Enable.2FDisable_Last_Published_Date"></a>Enable/Disable Last Published Date</h3>
-<p>You can toggle the display of the Last Publish Date by setting the <code>skipGenerationDate</code> value within the configuration.</p>
+<h2><a name="Contact_Section"></a>Contact Section</h2>
+<p>The Contact section, allows you to define various electronic and physical contact methods.  Not all sections need to be completed, the system will simply skip empty blocks. Below is an example</p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
-    &lt;custom&gt;
-      &lt;bootstrapSkin&gt;
-        &lt;projectbar&gt;
-          &lt;skipGenerationDate&gt;true&lt;/skipGenerationDate&gt;
-        &lt;/projectbar&gt;
-      &lt;/bootstrapSkin&gt;
-    &lt;/custom&gt;
-  &lt;/project&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;contact&gt;
+        &lt;email&gt;bootstrap-skin@maven.sites.uk&lt;/email&gt;
+        &lt;fax&gt;01752 123456&lt;/fax&gt;
+        &lt;mobile&gt;07712345678&lt;/mobile&gt;
+        &lt;landline&gt;01752 987654&lt;/landline&gt;
+        &lt;address&gt;
+          &lt;line1&gt;Postbox&lt;/line1&gt;
+          &lt;line2&gt;221B Baker Street&lt;/line2&gt;
+          &lt;city&gt;London&lt;/city&gt;
+          &lt;county&gt;London&lt;/county&gt;
+          &lt;country&gt;England&lt;/country&gt;
+          &lt;post_code&gt;NW1 6XE&lt;/post_code&gt;
+        &lt;/address&gt;
+      &lt;/contact&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
 </code></pre></div></section><section>
-<h3><a name="Last_Publish_Date_Format"></a>Last Publish Date Format</h3>
-<p>You are able to modify the display properties for the date publish, the default value is: <code>yyyy-MM-dd</code>.</p>
+<h2><a name="Social_Media"></a>Social Media</h2>
+<p>The Social Media bar places the brand icon (from bootstrap-icons) into a singular line with a link to the supplied account, allowing organisations to provide this information in a way which does not link information to external services.</p><section>
+<h3><a name="Facebook"></a>Facebook</h3>
+<p>You can provide a link to a Facebook group by creating a Facebook element and adding the Facebook group identifier.</p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
-    &lt;publishDate format=&quot;&quot; /&gt;
-  &lt;/project&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;facebook&gt;
+        &lt;groupId&gt;example&lt;/groupId&gt;
+      &lt;/facebook&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div>
+<p>The above configuration will create a link to <code>https://facebook.com/example</code>.</p></section><section>
+<h3><a name="Instagram"></a>Instagram</h3>
+<p>You can provide a link to an Instagram account by creating an Instagram element and adding the LinkedIn account identifier.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;linkedin&gt;
+        &lt;accountId&gt;example&lt;/accountId&gt;
+      &lt;/linkedin&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div>
+<p>The above configuration will create a link to <code>https://linkedin.com/example</code>.</p></section><section>
+<h3><a name="LinkedIn"></a>LinkedIn</h3>
+<p>You can provide a link to Instagram group by creating a Instagram element and adding the Instagram account identifier.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;instagram&gt;
+        &lt;accountId&gt;example&lt;/accountId&gt;
+      &lt;/instagram&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div>
+<p>The above configuration will create a link to <code>https://instagram.com/example</code>.</p></section><section>
+<h3><a name="Twitter"></a>Twitter</h3>
+<p>You can provide a link to a Twitter profile by creating a Twitter element and adding the account identifier.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;twitter&gt;
+        &lt;accountId&gt;example&lt;/accountId&gt;
+      &lt;/twitter&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div>
+<p>The above configuration will create a link to <code>https://twitter.com/example</code>.</p><section>
+<h4><a name="Twitter"></a>Twitter</h4>
+<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer. This will create the url <code>https://twitter.com/stevecrox0914</code></p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;twitter&gt;
+        &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
+      &lt;/twitter&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div></section></section><section>
+<h3><a name="Source_Control_Management_.28SCM.29"></a>Source Control Management (SCM)</h3>
+<p>As part of the Social Media bar you are able to include links to the project. The following configurations are supported.</p></section><section>
+<h3><a name="Bitbucket"></a>Bitbucket</h3>
+<p>Bitbucket is one of several source control management solutions supported in the media bar, the Bitbucket element has 2 attributes, <code>project</code> and <code>repository</code>. <code>project</code> is the Bitbucket user/organisation to whom the repository belongs, while <code>repository</code> is the Bitbucket repository name. The skin will use this to build the URL with the path <code>https://bitbucket.com/&lt;project&gt;/&lt;repository&gt;</code></p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+        &lt;gitHub&gt;
+            &lt;project&gt;stevecrox&lt;/project&gt;
+            &lt;repository&gt;maven-site-bootstrap-skin&lt;/repository&gt;
+        &lt;/gitHub&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
 </code></pre></div></section><section>
-<h3><a name="Enable.2FDisable_Last_Published_Version"></a>Enable/Disable Last Published Version</h3>
-<p>You can toggle the display of the Last Publish Version by setting the <code>skipGenerationVersion</code> value within the configuration.</p>
+<h3><a name="GitHub"></a>GitHub</h3>
+<p>Github is one of several source control management solutions supported in the media bar, the Github element has 2 attributes, <code>organisation</code> and <code>repository</code>. <code>organisation</code> is the Github user/organisation to whom the repository belongs, while <code>repository</code> is the Github repository name. The skin will use this to build the URL with the path <code>https://github.com/&lt;organisation&gt;/&lt;repository&gt;</code></p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;project name=&quot;xxx&quot;&gt;
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+        &lt;gitHub&gt;
+            &lt;organisation&gt;stevecrox&lt;/organisation&gt;
+            &lt;repository&gt;maven-site-bootstrap-skin&lt;/repository&gt;
+        &lt;/gitHub&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div></section><section>
+<h3><a name="GitLab"></a>GitLab</h3>
+<p>GitLab is one of several source control management solutions supported in the media bar, the GitLab element has 2 attributes, <code>project</code> and <code>repository</code>. <code>GitLab</code> is the GitLab user/organisation to whom the repository belongs, while <code>repository</code> is the GitLab repository name. The skin will use this to build the URL with the path <code>https://gitlab.com/&lt;project&gt;/&lt;repository&gt;</code></p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+    [...]
     &lt;custom&gt;
-      &lt;bootstrapSkin&gt;
-        &lt;projectbar&gt;
-          &lt;skipGenerationVersion&gt;true&lt;/skipGenerationVersion&gt;
-        &lt;/projectbar&gt;
-      &lt;/bootstrapSkin&gt;
+        &lt;bootstrapSkin&gt;
+            &lt;gitHub&gt;
+                &lt;project&gt;stevecrox&lt;/project&gt;
+                &lt;repository&gt;maven-site-bootstrap-skin&lt;/repository&gt;
+            &lt;/gitHub&gt;
+        &lt;/bootstrapSkin&gt;
     &lt;/custom&gt;
-  &lt;/project&gt;
+    [...]
+&lt;/project&gt;
 </code></pre></div></section></section>
       </div>
     </main>

@@ -19,13 +19,13 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div id="banner" class="container-fluid">
           <div class="justify-content-start flex-fill"><a href="https://github.com/stevecrox/maven-site-bootstrap-skin" id="bannerLeftLink" class="navbar-brand ps-2"><img id="bannerLeftImg" src="image/example-banner-left.png"  alt=""  width="340px" height="86px" style="border: 0; "/></a></div>
-          <div class="justify-content-end"><a href="https://github.com/stevecrox/maven-site-bootstrap-skin" id="bannerRightLink" class="navbar-brand ps-2"><img id="bannerRightImg" src="image/example-banner-right.png"  alt=""  width="256px" height="125px" style="border: 0; "/></a></div>
+          <div class="justify-content-end"></div>
         </div>
       </nav>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div id="projectBarContainer" class="container-fluid">
 <a href="./index.html" id="navbarIconLink" title="alt text for example logo (for testing)" class="navbar-brand text-wrap ps-2"><img id="navbarIconImg" src="./image/example-logo.png"  alt="alt text for example logo (for testing)"  title="Navbar Brand Icon" width="32px" height="32px" style=""/> Kitchen Sink Example
 </a>          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,7 +106,7 @@
     </header>
 
     <main class="d-flex flex-row">
-      <nav id="sidebar" class="nav navbar-expand-lg align-items-start navbar-dark bg-dark ">
+      <nav id="sidebar" class="nav navbar-expand-lg align-items-start navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarSupportedContent" aria-controls="#sidebarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -295,19 +295,36 @@ Well maybe toast is better</p>
     &lt;/address&gt;
   &lt;/contact&gt;
 </code></pre></div></section><section>
-<h4><a name="Github"></a>Github</h4>
-<p>I have added a Github element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+<h4><a name="GitHub"></a>GitHub</h4>
+<p>Github is one of several source control management solutions supported in the media bar, the Github element has 2 attributes, organisation and repository. organisation is the Github user/organisation to whom the repository belongs, while repository is the Github repository name. The skin will use this to build the URL with the path <a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin">https://github.com/stevecrox/maven-site-bootstrap-skin</a></p>
 
-<div class="source"><pre class="d-inline-flex prettyprint linenums"><code class="language-xml">  &lt;gitHub&gt;
-    &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
-  &lt;/gitHub&gt;
+<div class="source"><pre class="d-inline-flex prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;gitHub&gt;
+        &lt;organisation&gt;stevecrox&lt;/organisation&gt;
+        &lt;repository&gt;maven-site-bootstrap-skin&lt;/repository&gt;
+      &lt;/gitHub&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
 </code></pre></div></section><section>
 <h4><a name="Twitter"></a>Twitter</h4>
-<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer. This will create the url <code>https://twitter.com/stevecrox0914</code></p>
 
-<div class="source"><pre class="d-inline-flex prettyprint linenums"><code class="language-xml">  &lt;twitter&gt;
-    &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
-  &lt;/twitter&gt;
+<div class="source"><pre class="d-inline-flex prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;twitter&gt;
+        &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
+      &lt;/twitter&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
 </code></pre></div></section></section></section>
       </div>
     </main>
@@ -328,12 +345,10 @@ Well maybe toast is better</p>
             <div>Get connected with us on social networks</div>
             <div>
             <a id="bootstrapSkin.facebook.groupIdLinkContact" https://www.facebook.com/groups/test class=" p-1"><i id="bootstrapSkin.facebook.groupIdLinkIcon" class=" bi-facebook text-dark px-1"></i></a>
-            <a id="bootstrapSkin.instagram.accountIdLinkContact" https://instagram.com//test class=" p-1"><i id="bootstrapSkin.instagram.accountIdLinkIcon" class=" bi-instagram text-dark px-1"></i></a>
-            <a id="bootstrapSkin.twitter.accountIdLinkContact" https://twitter.com//test class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-twitter text-dark px-1"></i></a>
+            <a id="bootstrapSkin.instagram.accountIdLinkContact" https://instagram.com/test class=" p-1"><i id="bootstrapSkin.instagram.accountIdLinkIcon" class=" bi-instagram text-dark px-1"></i></a>
+            <a id="bootstrapSkin.twitter.accountIdLinkContact" https://twitter.com/test class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-twitter text-dark px-1"></i></a>
             <a id="bootstrapSkin.linkedin.accountIdLinkContact" https://linkedin.com/in/test class=" p-1"><i id="bootstrapSkin.linkedin.accountIdLinkIcon" class=" bi-linkedin text-dark px-1"></i></a>
             <a id="bootstrapSkin.gitHub.projectIdLinkContact" https://github.com/stevecrox/maven-site-bootstrap-skin class=" p-1"><i id="bootstrapSkin.gitHub.projectIdLinkIcon" class=" bi-github text-dark px-1"></i></a>
-            <a id="bootstrapSkin.gitLab.projectIdLinkContact" https://gitlab.com/stevecrox/maven-site-bootstrap-skin class=" p-1"><i id="bootstrapSkin.gitLab.projectIdLinkIcon" class=" bi-git text-dark px-1"></i></a>
-            <a id="bootstrapSkin.bitbucket.projectIdLinkContact" https://bitbucket.com/${$bitbucketProjectId} class=" p-1"><i id="bootstrapSkin.bitbucket.projectIdLinkIcon" class=" bi-git text-dark px-1"></i></a>
             </div>
             <div id="copyrightDiv" class="pt-3">
               <p>&#169;

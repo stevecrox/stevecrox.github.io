@@ -18,7 +18,7 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div id="projectBarContainer" class="container-fluid">
 <a href="./index.html" id="navbarIconLink" title="Navbar Brand Icon" class="navbar-brand text-wrap ps-2"> Maven Site Bootstrap Skin
 </a>          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,13 +96,13 @@
           </div>
         </div>
       </nav>
-      <nav id="projectBar" class="navbar py-0 navbar-dark bg-dark " aria-label="projectBarList">
+      <nav id="projectBar" class="navbar py-0 navbar-dark bg-dark" aria-label="projectBarList">
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
-            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-20</span>
+            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-27</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.19</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.20</span>
           </div>
         </div>
       </nav>
@@ -193,20 +193,37 @@ Well maybe toast is better</p>
   &lt;menuOrientation&gt;left&lt;/menuOrientation&gt;
 &lt;/navbar&gt;
 </code></pre></div></section><section>
-<h3><a name="Github"></a>Github</h3>
-<p>I have added a Github element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+<h3><a name="GitHub"></a>GitHub</h3>
+<p>Github is one of several source control management solutions supported in the media bar, the Github element has 2 attributes, organisation and repository. organisation is the Github user/organisation to whom the repository belongs, while repository is the Github repository name. The skin will use this to build the URL with the path <a class="externalLink" href="https://github.com/stevecrox/maven-site-bootstrap-skin">https://github.com/stevecrox/maven-site-bootstrap-skin</a></p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;gitHub&gt;
-    &lt;projectId&gt;stevecrox/maven-site-bootstrap-skin&lt;/projectId&gt;
-  &lt;/gitHub&gt;
-</code></pre></div></section><section>
-<h3><a name="Twitter"></a>Twitter</h3>
-<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer.</p>
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+        &lt;gitHub&gt;
+            &lt;organisation&gt;stevecrox&lt;/organisation&gt;
+            &lt;repository&gt;maven-site-bootstrap-skin&lt;/repository&gt;
+        &lt;/gitHub&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div><section>
+<h4><a name="Twitter"></a>Twitter</h4>
+<p>I have added a Twitter element to ensure the footer has some content and the icon should appear on the right side of the footer. This will create the url <code>https://twitter.com/stevecrox0914</code></p>
 
-<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">  &lt;twitter&gt;
-    &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
-&lt;/twitter&gt;
-</code></pre></div></section></section>
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+  [...]
+  &lt;custom&gt;
+    &lt;bootstrapSkin&gt;
+      &lt;twitter&gt;
+        &lt;accountId&gt;stevecrox0914&lt;/accountId&gt;
+      &lt;/twitter&gt;
+    &lt;/bootstrapSkin&gt;
+  &lt;/custom&gt;
+  [...]
+&lt;/project&gt;
+</code></pre></div></section></section></section>
       </div>
     </main>
 
@@ -218,7 +235,7 @@ Well maybe toast is better</p>
           <div id="socialMediaDiv" class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0">
             <div>Get connected with us on social networks</div>
             <div>
-            <a id="bootstrapSkin.twitter.accountIdLinkContact" https://twitter.com//stevecrox0914 class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-twitter text-dark px-1"></i></a>
+            <a id="bootstrapSkin.twitter.accountIdLinkContact" https://twitter.com/stevecrox0914 class=" p-1"><i id="bootstrapSkin.twitter.accountIdLinkIcon" class=" bi-twitter text-dark px-1"></i></a>
             <a id="bootstrapSkin.gitHub.projectIdLinkContact" https://github.com/stevecrox/maven-site-bootstrap-skin class=" p-1"><i id="bootstrapSkin.gitHub.projectIdLinkIcon" class=" bi-github text-dark px-1"></i></a>
             </div>
             <div id="copyrightDiv" class="pt-3">
