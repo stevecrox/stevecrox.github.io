@@ -104,9 +104,9 @@
         <div id="projectBarContainer" class="container-fluid">
           <div id="breadcrumbSpacer"  class="col justify-content-start"></div>
           <div id="projectBaDateVersionContainer" class="justify-content-end">
-            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-29</span>
+            <span id="projectLastPublished" class="px-1 navbar-text">Last Published: 2022-07-30</span>
             <span id="projectDateVersionSpacer" class="px-1 navbar-text">|</span>
-            <span id="projectVersion" class="px-1 navbar-text">Version: 0.9.22</span>
+            <span id="projectVersion" class="px-1 navbar-text">Version: 1.0.0</span>
           </div>
         </div>
       </nav>
@@ -116,6 +116,39 @@
       <div class="p-5 rounded">
 <p>#Side Bar</p>
 <hr />
+By default the [sidebar](https://getbootstrap.com/docs/5.2/examples/sidebars/) is disabled, it is included as one of the goals of the skin was to support the Maven 2 general layout which placed the navigation menu on the screen as a sidebar. This section will outline the configuration options offered by the sidebar.
+<section>
+<h2><a name="Enable.2FDisable_the_side_bar"></a>Enable/Disable the side bar</h2>
+<p>The skin allows you to disable or enable the sidebar by setting a custom element, as shown below:</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+    [...]
+    &lt;custom&gt;
+      &lt;bootstrapSkin&gt;
+        &lt;sidebar&gt;
+          &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/sidebar&gt;
+      &lt;/bootstrapSkin&gt;
+    &lt;/custom&gt;
+    [...]
+&lt;/project&gt;
+</code></pre></div></section><section>
+<h2><a name="Sidebar_Bar_Style"></a>Sidebar Bar Style</h2>
+<p>You can configure the CSS classes used on the sidebar. Bootstrap 5 contains a number of classes for common colouring, by default &#x2018;navbar-dark bg-dark&#x2019; has been set as this provides a clear contrast between the banner and the main text.</p>
+
+<div class="source"><pre class=" prettyprint linenums"><code class="language-xml">&lt;project name=&quot;xxx&quot;&gt;
+    [...]
+    &lt;custom&gt;
+      &lt;bootstrapSkin&gt;
+        &lt;sidebar&gt;
+          &lt;style&gt;navbar-light bg-light&lt;/style&gt;
+        &lt;/sidebar&gt;
+      &lt;/bootstrapSkin&gt;
+    &lt;/custom&gt;
+    [...]
+&lt;/project&gt;
+</code></pre></div>
+<p>The above configuration would change the NavBar to look like the following</p></section>
       </div>
     </main>
 
